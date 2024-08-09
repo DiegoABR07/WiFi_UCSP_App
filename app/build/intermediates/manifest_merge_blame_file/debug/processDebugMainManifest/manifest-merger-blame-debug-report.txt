@@ -40,8 +40,8 @@
 24-->[androidx.core:core:1.13.1] C:\Users\diego\.gradle\caches\transforms-4\586e550422b6e33dbfd0b575c8ba5703\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 25        android:debuggable="true"
 26        android:extractNativeLibs="true"
-27        android:icon="@mipmap/ic_launcher"
-27-->C:\Users\diego\AndroidStudioProjects\WiFiUCSPApp\app\src\main\AndroidManifest.xml:12:9-43
+27        android:icon="@drawable/ic_launcher_background"
+27-->C:\Users\diego\AndroidStudioProjects\WiFiUCSPApp\app\src\main\AndroidManifest.xml:12:9-56
 28        android:label="@string/app_name"
 28-->C:\Users\diego\AndroidStudioProjects\WiFiUCSPApp\app\src\main\AndroidManifest.xml:13:9-41
 29        android:roundIcon="@mipmap/ic_launcher_round"

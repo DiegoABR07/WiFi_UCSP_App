@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="WiFi UCSP App">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-07-15T16:14:12.271586600Z">
+        <DropdownSelection timestamp="2024-08-09T06:08:06.126100300Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\diego\.android\avd\Pixel_3a_API_35.avd" />

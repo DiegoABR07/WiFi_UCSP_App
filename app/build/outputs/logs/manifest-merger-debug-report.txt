@@ -103,7 +103,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\diego\.gradle\cach
 	android:roundIcon
 		ADDED from C:\Users\diego\AndroidStudioProjects\WiFiUCSPApp\app\src\main\AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from C:\Users\diego\AndroidStudioProjects\WiFiUCSPApp\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\diego\AndroidStudioProjects\WiFiUCSPApp\app\src\main\AndroidManifest.xml:12:9-56
 	android:allowBackup
 		ADDED from C:\Users\diego\AndroidStudioProjects\WiFiUCSPApp\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
