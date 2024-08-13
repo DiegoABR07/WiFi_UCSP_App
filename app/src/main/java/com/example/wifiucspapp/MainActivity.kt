@@ -44,6 +44,13 @@ import androidx.compose.ui.unit.sp
 
 import com.example.wifiucspapp.ui.theme.WiFiUCSPAppTheme
 
+//
+import org.apache.poi.ss.usermodel.Workbook
+import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import java.io.FileOutputStream
+import java.io.IOException
+//
+
 class MainActivity : ComponentActivity() {
 
     // Gestor de Wi-Fi para interactuar con el sistema de Wi-Fi del dispositivo.
@@ -118,6 +125,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+
+
     // Composable que muestra el estado del permiso y un botón para solicitarlo.
     @Composable
     fun WiFiScanCondition(context: Context) {
@@ -178,6 +187,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+
+
     // Función para actualizar el estado del permiso basado en el estado actual del sistema
     private fun updatePermissionState() {
         isLocationPermissionGranted.value = ContextCompat.checkSelfPermission(
@@ -209,6 +220,7 @@ class MainActivity : ComponentActivity() {
         if (isLocationPermissionGranted.value) {
             registerReceiver(wifiScanReceiver, IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION))
             wifiManager.startScan()
+
         } else {
             Toast.makeText(this, "Permiso de ubicación denegado", Toast.LENGTH_SHORT).show()
         }
@@ -220,9 +232,42 @@ class MainActivity : ComponentActivity() {
             wifiResults.clear()
             wifiResults.addAll(wifiManager.scanResults)
             unregisterReceiver(wifiScanReceiver)  // Importante desregistrar para evitar fugas de memoria.
+            writeWifiDataToExcel(context,wifiResults)
         } else {
             Toast.makeText(context, "Permiso de ubicación denegado", Toast.LENGTH_SHORT).show()
         }
     }
 
+}
+
+//
+private fun writeWifiDataToExcel(context: Context, wifiResults: List<ScanResult>) {
+    val workbook: Workbook = XSSFWorkbook()
+    val sheet = workbook.createSheet("WiFi Data")
+
+    val headerRow = sheet.createRow(0)
+    headerRow.createCell(0).setCellValue("SSID")
+    headerRow.createCell(1).setCellValue("BSSID")
+    headerRow.createCell(2).setCellValue("Signal Level (RSSI)")
+
+    wifiResults.forEachIndexed { index, scanResult ->
+        val row = sheet.createRow(index + 1)
+        row.createCell(0).setCellValue(scanResult.SSID)
+        row.createCell(1).setCellValue(scanResult.BSSID)
+        row.createCell(2).setCellValue(scanResult.level.toString())
+    }
+
+    val fileName = "WiFiData.xlsx"
+    val fileOutputStream: FileOutputStream
+    try {
+        fileOutputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE)
+        workbook.write(fileOutputStream)
+        fileOutputStream.close()
+        Toast.makeText(context, "File saved as $fileName", Toast.LENGTH_SHORT).show()
+    } catch (e: IOException) {
+        e.printStackTrace()
+        Toast.makeText(context, "Failed to save file", Toast.LENGTH_SHORT).show()
+    } finally {
+        workbook.close()
+    }
 }

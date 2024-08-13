@@ -1,9 +1,9 @@
-#Fri Aug 09 01:06:42 PET 2024
-base.0=C\:\\Users\\diego\\AndroidStudioProjects\\WiFiUCSPApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=C\:\\Users\\diego\\AndroidStudioProjects\\WiFiUCSPApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=C\:\\Users\\diego\\AndroidStudioProjects\\WiFiUCSPApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
-base.3=C\:\\Users\\diego\\AndroidStudioProjects\\WiFiUCSPApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
-base.4=C\:\\Users\\diego\\AndroidStudioProjects\\WiFiUCSPApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+#Mon Aug 12 12:04:38 PET 2024
+base.0=/home/summy/StudioProjects/WiFi_UCSP_App/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/summy/StudioProjects/WiFi_UCSP_App/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/summy/StudioProjects/WiFi_UCSP_App/app/build/intermediates/dex/debug/mergeProjectDexDebug/11/classes.dex
+base.3=/home/summy/StudioProjects/WiFi_UCSP_App/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
+base.4=/home/summy/StudioProjects/WiFi_UCSP_App/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=11/classes.dex
